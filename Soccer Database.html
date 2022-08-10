@@ -15908,7 +15908,7 @@ memory usage: 22.8+ MB
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>below I will clean the matches data in these columns <code>goal, shoton, shotoff, foulcommit, card, cross, corner, possession</code>. The data is in the form of markdown format.</p>
+<p>below I will clean the matches data in these columns <code>goal, shoton,cross</code>. The data is in the form of markdown format.</p>
 
 </div>
 </div>
@@ -17311,7 +17311,7 @@ memory usage: 284.9+ KB
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The column <code>buildUpPlayDribbline</code> has about ~70% of missing data and because of this I will drop it in the cell below</p>
+<p>The column <code>buildUpPlayDribbling</code> has about ~70% of missing data and because of this I will drop it in the cell below</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -19522,6 +19522,12 @@ memory usage: 136.8 KB
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The heatmap above shows how the different attributes are correlated with each other. Each attribute correlates with itself perfectly which is why the diagonal is 1s. How ever looking at the <code>team_win</code>, it seems to have very little correlation with the team attributes.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 
 </div>
 </div>
@@ -19599,6 +19605,12 @@ memory usage: 136.8 KB
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The above plot shows that if the number of shoton(short on target) is high there is a correlated high number of victories too. If broken down to two parts by number of shotons, the correlation is very high for shotons below 150000 compared to the correlation for shotons above 150000</p>
+
+</div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -19787,6 +19799,12 @@ memory usage: 136.8 KB
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>It seems that the number of crosses is positively correlated with the number of wins. If a team has a high number of crosses there is a correlated high number of wins. The correlation becomes low if you only look at the high number of crosses, number above 300000.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><a id='conclusion'></a></p>
 <h1 id="Conclusion"><a href="#introduction">Conclusion</a><a class="anchor-link" href="#Conclusion">&#182;</a></h1>
 </div>
@@ -19811,7 +19829,21 @@ I thought that some of the teams would improve over time, so I decided to look a
 <br>a <a href='#heatmap'>heatmap</a>. There is very little correlation between the victories and the attributes I have explored in the diagrams, I then looked at two<br>more attributes, the number of<code>shoton</code> and the number of <code>crosses</code>. These attributes do have a correlation with the number
 <br>of victories a team has and that is shown in these figures: <a href='#shoton'>shoton figure</a> and <a href='#cross'>cross figure</a>. The correlation is positive with high occurrences
 <br> of team wins correlating with high shotons and high crosses</p>
-<p>One of the limitations in this analysis is that I did not use any statistical test and because of that I can only speak of correlations between variables but I am not sure whether there is causation or not.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Limitations">Limitations<a class="anchor-link" href="#Limitations">&#182;</a></h2>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The column <code>buildUpPlayDribbling</code> has about ~70% of missing data, I dropped this column and I find that to be a limitation to this analysis because I could have used it to find the relationship between it and the number of victories a team has but I do not have sufficient data to make an analysis of it.
+<br>
+One of the limitations in this analysis is that I did not use any statistical tests and because of that I can only speak of correlations between variables but I am not sure whether there is causation or not. I think this analysis could be better improved by employing statistical tests.
+<br>
+The dataset can be further improved upon by collecting from other leagues and games such as (words of data collector) "international games, national cups, Champion's League and Europa League".</p>
 
 </div>
 </div>
